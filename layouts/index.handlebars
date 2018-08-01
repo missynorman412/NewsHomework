@@ -1,0 +1,59 @@
+<div class="container">
+	<div class="jumbotron">
+		<p>
+			<h1>News and Comment</h1>
+		</p>
+	</div>
+
+	<div class="row">
+
+		<div class="col-md-8">
+			<div class="text-center">
+				<h2>Article:</h2>
+			</div>
+
+			<br/>
+			<p id="title">{{article.title}}</p>
+			<p id="summary">{{article.summary}}</p>
+			<a id="link" href={{article.link}}>Further Reading</a>
+			<br/><br/>
+
+			<div>
+				<button class="btn btn-default" type="button" id="prev_article">Prev</button>
+				<button class="btn btn-default" type="button" id="next_article">Next</button>
+			</div>
+		</div> <!-- End col -->
+
+		<div class="col-md-4 min-height-200">
+			<div class="text-center">
+				<h2>Comments:</h2>
+			</div>
+			<div id="comments">
+			{{#each article.comments}}
+				{{comment}}<br/>
+			{{/each}}
+			</div>
+			<button class="btn btn-danger" type="button" id="delete_comments">Delete</button>
+		</div>
+
+		<div class="col-md-4 min-height-200">
+			<div class="text-center">
+				<h2>Add comment:</h2>
+			</div>
+			<input type="text" class="form-control" id="new_comment" maxlength="30">
+			<button class="btn btn-success" type="button" id="add_comment">Add</button>
+		</div>
+
+	</div> <!-- End row -->
+
+	<br/>
+
+	<!-- Info -->
+	<div class="row">
+		<div class="col-md-12">
+			<p>
+				<a href="https://github.com/mattsplats/cheerio_mongo">GitHub Repo</a>
+			</p>
+		</div>
+	</div>
+</div> <!-- End row -->
